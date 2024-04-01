@@ -28,21 +28,28 @@ func getSpecies():
 	return ["human"]
 
 func getThickness() -> int:
-	return 50
+	return 105
 
 func getFemininity() -> int:
-	return 50
+	return 500
 
 func createBodyparts():
-	giveBodypartUnlessSame(GlobalRegistry.createBodypart("humanhead"))
+	giveBodypartUnlessSame(GlobalRegistry.createBodypart("androidhead"))
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("overeyehair2"))
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("anthrobody"))
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("anthroarms"))
 	var breasts = GlobalRegistry.createBodypart("humanbreasts")
-	breasts.size = 3
+	breasts.size = 1
 	giveBodypartUnlessSame(breasts)
+	var penis = GlobalRegistry.createBodypart("humanpenis")
+	penis.lengthCM = 15
+	penis.ballsScale = 1
+	giveBodypartUnlessSame(penis)
+	giveBodypartUnlessSame(GlobalRegistry.createBodypart("anus"))
+	var tail = GlobalRegistry.createBodypart("felinetail")
+	tail.tailScale = 1
+	giveBodypartUnlessSame(tail)
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("plantilegs"))
-	giveBodypartUnlessSame(GlobalRegistry.createBodypart("humanears"))
 
 func getDefaultEquipment():
 	return ["AndroidSuit"]
